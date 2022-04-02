@@ -4,9 +4,9 @@
 #include	<gl/glut.h>
 
 
- void RenderSceneCB()
+ void RenderSceneCB() //функци€ обратного вызова т.к мы работаем в оконной системе
 {
-	glClear(GL_COLOR_BUFFER_BIT);
+	glClear(GL_DEPTH_BUFFER_BIT);
 	glutSwapBuffers();
 }
 
@@ -14,16 +14,15 @@ int main(int argc, char** argv) {
 
 	
 	glutInit(&argc, argv); //»нициализаци€ GLUT
-	glutInitDisplayMode( GLUT_RGBA);// выбираем mode диспле€ RGBA-дл€ цветного вывода
-	glutInitWindowSize(1024, 50);//инициализаци€ размера окна
-	glutInitWindowPosition(100, 100); //инициализаци€ окна приложений
+	glutInitDisplayMode(GLUT_DOUBLE| GLUT_RGBA);// выбираем режим отображени€ диспле€ RGBA-дл€ цветного вывода
+	glutInitWindowPosition(100, 100); //инициализаци€ верхнего левого угла окна 
+	glutInitWindowSize(1024, 1024);//инициализаци€ размера окна 
 	glutCreateWindow("Lesson #1"); // создаст окно
 
-	glutDisplayFunc(RenderSceneCB);
+	glutDisplayFunc(RenderSceneCB); //устанавливает обратный вызов диспле€ дл€ текущего окна.
 
 	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-	glutMainLoop();
+	glutMainLoop();// ќсновной цикл GLUT
 	
-
 	return 1;
 }
