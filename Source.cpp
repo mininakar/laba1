@@ -6,7 +6,7 @@
 
  void RenderSceneCB() //функция обратного вызова т.к мы работаем в оконной системе
 {
-	glClear(GL_DEPTH_BUFFER_BIT);
+	glClear(GL_COLOR_BUFFER_BIT);
 	glutSwapBuffers();
 }
 
@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
 
 	glutDisplayFunc(RenderSceneCB); //устанавливает обратный вызов дисплея для текущего окна.
 
-	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+	glClearColor(0.0f, 255.0f, 0.0f, 0.0f);
 	glutMainLoop();// Основной цикл GLUT
 	
 	return 1;
