@@ -1,4 +1,8 @@
 # laba1
+			This work may be useful for those who are starting to learn openGL. in it I drew a triangle
+
+//
+
 BASIS:
 
 OpenGL has:
