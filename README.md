@@ -33,7 +33,7 @@ function is used to call back display for continuous callback.further I describe
 	    stride - specifies the byte offset between consecutive generic vertex attributes. Use the initial value = 0, thats mean the generic vertex attributes are understood to be tightly packed in the array.
 	    pointer - specifies a offset of the first component of the first generic vertex attribute in the array in the data store of the buffer. Use the initial value = 0.
 
-	 glDrawArrays(GL_TRIANGLES, 0, 3)
+	glDrawArrays(GL_TRIANGLES, 0, 3)
 	Render primitives from array data. Takes 3 values: mode, first, count
 		mode - specifies what kind of primitives to render. 
 		first - specifies the starting index in the enabled arrays.
